@@ -239,7 +239,13 @@ variable "family" {
 variable "parameters" {
   description = "A list of DB parameters (map) to apply"
   type        = list(map(string))
-  default     = []
+  default     = [
+    {
+      name = ""
+      value = ""
+      apply_method = ""
+    }
+  ]
 }
 
 # DB option group
